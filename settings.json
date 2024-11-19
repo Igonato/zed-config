@@ -7,11 +7,50 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  // AI
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b"
+    },
+    "version": "2"
+  },
+  "features": {
+    "inline_completion_provider": "none"
+  },
+
+  // Vim stuff
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "vim": {
+    "use_multiline_find": true,
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
+
+  // Font
+  "ui_font_size": 15,
+  "buffer_font_size": 18,
+  "buffer_font_family": "IosevkaCustom Nerd Font",
+  // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
+  // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
+  // <-> <--> <---> <----> <=> <==> <===> <====> :: ::: __
+  // <~~ </ </> /> ~~> == != /= ~= <> === !== !=== =/= =!=
+  // <: := *= *+ <* <*> *> <| <|> |> <. <.> .> +* =* =: :>
+  // (* *) /* */ [| |] {| |} ++ +++ \/ /\ |- -| <!-- <!---
+  "buffer_font_features": {
+    "calt": true
+  },
+
+  // Theme
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "Catppuccin Latte",
+    "dark": "Andromeda"
+  },
+
+  // Other UI
+  "scrollbar": {
+    "show": "always"
   }
 }
