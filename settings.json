@@ -21,6 +21,7 @@
       "provider": "ollama",
       "model": "qwen2.5-coder:7b"
     },
+    "show_hints": false,
     "version": "2"
   },
   "features": {
@@ -28,7 +29,7 @@
   },
 
   // Vim stuff
-  "vim_mode": false,
+  "vim_mode": true,
   "relative_line_numbers": true,
   "vim": {
     "use_multiline_find": true,
@@ -63,5 +64,16 @@
   // Other UI
   "scrollbar": {
     "show": "always"
+  },
+  "git": {
+    "git_gutter": "tracked_files"
+  },
+  "terminal": {
+    "dock": "right",
+    "font_size": 15,
+    "line_height": "standard",
+    "shell": {
+      "program": "C:\\\\Program Files\\Git\\bin\\bash.exe"
+    }
   }
 }
