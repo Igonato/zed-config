@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // Basic
+  "tab_bar": {
+    "show": true
+  },
+  "base_keymap": "SublimeText",
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "autosave": "on_focus_change",
+
   // AI
   "assistant": {
     "default_model": {
@@ -20,7 +28,7 @@
   },
 
   // Vim stuff
-  "vim_mode": true,
+  "vim_mode": false,
   "relative_line_numbers": true,
   "vim": {
     "use_multiline_find": true,
@@ -30,7 +38,7 @@
 
   // Font
   "ui_font_size": 15,
-  "buffer_font_size": 18,
+  "buffer_font_size": 20,
   "buffer_font_family": "IosevkaCustom Nerd Font",
   // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
   // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
@@ -47,6 +55,9 @@
     "mode": "system",
     "light": "Catppuccin Latte",
     "dark": "Andromeda"
+  },
+  "experimental.theme_overrides": {
+    "scrollbar.thumb.background": "#5555"
   },
 
   // Other UI

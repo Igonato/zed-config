@@ -1,0 +1,25 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    // Missing Sublime text bindings
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
+      "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
+      // "ctrl-;": "buffer_search::Fuzzy" // Not Implemented as of 2024-11-19
+      "alt--": "pane::GoBack",
+      "alt-shift--": "pane::GoForward",
+      "f9": "editor::SortLinesCaseSensitive",
+      "ctrl-f9": "editor::SortLinesCaseInsensitive",
+      // Layout presents are not implemnted as of 2024-11-19
+      // try workspace::SendKeystrokes maybe?
+      "alt-shift-2": "pane::SplitRight"
+    }
+  }
+]
