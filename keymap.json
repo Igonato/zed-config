@@ -10,7 +10,7 @@
   {
     "bindings": {
       // Navigation with alt and hjkl/arrows instead of more common ctrl-*
-      // Personal preference and keeps "ctrl-b ctrl-*" shortcuts working
+      // Personal preference and keeps "ctrl-k ctrl-*" shortcuts working
       // And Zed doesn't have a menu that would normally be activated by
       // pressing alt and then a key, so it's a ~free real estate~
       "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
@@ -216,7 +216,8 @@
     // Insert mode only
     "context": "vim_mode == insert",
     "bindings": {
-      "ctrl-r": ["vim::PushOperator", "Register"]
+      "ctrl-r": ["vim::PushOperator", "Register"],
+      "ctrl-d": ["editor::SelectNext", { "replace_newest": false }]
     }
   },
   // Empty pane, set of keybindings that are available when there is no active editor
