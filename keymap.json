@@ -21,6 +21,8 @@
       "alt-right": ["workspace::ActivatePaneInDirection", "Right"],
       "alt-up": ["workspace::ActivatePaneInDirection", "Up"],
       "alt-down": ["workspace::ActivatePaneInDirection", "Down"],
+      "alt-z": "pane::GoBack",
+      "alt-x": "pane::GoForward",
       "f4": "workspace::ToggleVimMode",
       "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
       "f5": "assistant::ToggleFocus",
