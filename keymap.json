@@ -218,10 +218,12 @@
   },
   {
     // Insert mode only
-    "context": "vim_mode == insert",
+    "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       "ctrl-r": ["vim::PushOperator", "Register"],
-      "ctrl-d": ["editor::SelectNext", { "replace_newest": false }]
+      "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
+      "j j": "vim::NormalBefore", // remap jj in insert mode to escape
+      "j k": "vim::NormalBefore" // remap jk in insert mode to escape
     }
   },
   // Empty pane, set of keybindings that are available when there is no active editor
@@ -232,22 +234,6 @@
       "space space": "file_finder::Toggle",
       // Open recent project
       "space f p": "projects::OpenRecent"
-    }
-  },
-  // Comment code
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments"
-    }
-  },
-  // Better escape
-  {
-    "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-      "j j": "vim::NormalBefore", // remap jj in insert mode to escape
-      "j k": "vim::NormalBefore" // remap jk in insert mode to escape
     }
   },
   // File panel (netrw)
