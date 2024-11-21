@@ -41,6 +41,8 @@
     "bindings": {
       "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
       "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
+      "ctrl-alt-j": "editor::AddSelectionBelow", // Insert Cursor Below
+      "ctrl-alt-k": "editor::AddSelectionAbove", // Insert Cursor Above
       // "ctrl-;": "buffer_search::Fuzzy" // Not yet supported ? as of 2024-11-19
       "alt--": "pane::GoBack",
       "alt-shift--": "pane::GoForward",
