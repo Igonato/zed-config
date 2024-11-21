@@ -13,6 +13,7 @@
   },
   "base_keymap": "SublimeText",
   "multi_cursor_modifier": "cmd_or_ctrl",
+  "cursor_blink": false,
   "autosave": "on_focus_change",
 
   // AI
