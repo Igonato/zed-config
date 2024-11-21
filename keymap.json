@@ -23,7 +23,8 @@
       "alt-down": ["workspace::ActivatePaneInDirection", "Down"],
       "f4": "workspace::ToggleVimMode",
       "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
-      "f5": "assistant::ToggleFocus"
+      "f5": "assistant::ToggleFocus",
+      "ctrl-k ctrl-p": "zed::OpenSettings"
     }
   },
   {
@@ -95,7 +96,9 @@
       "ctrl-c": "editor::Copy",
       "ctrl-s": "workspace::Save",
       "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-f": "buffer_search::Deploy"
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-[": "editor::Outdent",
+      "ctrl-]": "editor::Indent"
     }
   },
   {
@@ -188,21 +191,6 @@
       "g t": "editor::GoToTypeDefinition",
       "g T": "editor::GoToTypeDefinitionSplit",
       "g r": "editor::FindAllReferences",
-      "] d": "editor::GoToDiagnostic",
-      "[ d": "editor::GoToPrevDiagnostic",
-      // TODO: Go to next/prev error
-      "] e": "editor::GoToDiagnostic",
-      "[ e": "editor::GoToPrevDiagnostic",
-      // Symbol search
-      "s s": "outline::Toggle",
-      "s S": "project_symbols::Toggle",
-      // Diagnostic
-      "space x x": "diagnostics::Deploy",
-
-      // +Git
-      // Git prev/next hunk
-      "] h": "editor::GoToHunk",
-      "[ h": "editor::GoToPrevHunk",
 
       // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
 
@@ -222,6 +210,13 @@
       // TODO: Open other files
       // Show project panel with current file
       "space e": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    // Insert mode only
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-r": ["vim::PushOperator", "Register"]
     }
   },
   // Empty pane, set of keybindings that are available when there is no active editor
