@@ -19,8 +19,8 @@
   // AI
   "assistant": {
     "default_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:7b"
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
     },
     "show_hints": false,
     "version": "2"
@@ -83,9 +83,8 @@
     "Python": {
       "formatter": {
         "external": {
-          // TODO: fix this hack
-          "command": "python",
-          "arguments": ["-m", "ruff", "format", "-"]
+          "command": "ruff",
+          "arguments": ["format", "-"]
         }
       },
       "format_on_save": "on"
