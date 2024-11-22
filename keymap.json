@@ -170,7 +170,9 @@
       "space m P": "markdown::OpenPreviewToTheSide",
       "space f p": "projects::OpenRecent",
       "space s w": "pane::DeploySearch",
-      "space a c": "assistant::ToggleFocus"
+      "space a c": "assistant::ToggleFocus",
+      "space r t": "task::Spawn",
+      "space r r": "task::Rerun"
     }
   },
   {
@@ -245,19 +247,13 @@
       "A": "project_panel::NewDirectory",
       "r": "project_panel::Rename",
       "d": "project_panel::Delete",
+      "ctrl-shift-d": "project_panel::Duplicate",
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
       // Close project panel as project file panel on the right
       "q": "workspace::ToggleRightDock",
       "space e": "workspace::ToggleRightDock"
-    }
-  },
-  // Run nearest task
-  {
-    "context": "EmptyPane || SharedScreen || vim_mode == normal",
-    "bindings": {
-      "space r t": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
     }
   }
 ]
