@@ -26,7 +26,8 @@
       "f4": "workspace::ToggleVimMode",
       "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
       "f5": "assistant::ToggleFocus",
-      "ctrl-k ctrl-p": "zed::OpenSettings"
+      "ctrl-k ctrl-p": "zed::OpenSettings",
+      "ctrl-shift-`": "workspace::NewTerminal"
     }
   },
   {

@@ -74,7 +74,12 @@
     "font_size": 15,
     "line_height": "standard",
     "shell": {
-      "program": "C:\\\\Program Files\\Git\\bin\\bash.exe"
+      "with_arguments": {
+        "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
+        // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe"
+        // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
+        "args": ["--login", "-i"]
+      }
     }
   },
 
