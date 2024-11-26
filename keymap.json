@@ -27,7 +27,9 @@
             "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
             "f5": "assistant::ToggleFocus",
             "ctrl-k ctrl-p": "zed::OpenSettings",
-            "ctrl-shift-`": "workspace::NewTerminal"
+            "ctrl-shift-`": "workspace::NewTerminal",
+            "ctrl-tab": "pane::ActivateNextItem",
+            "ctrl-shift-tab": "pane::ActivatePrevItem"
         }
     },
     {
@@ -60,9 +62,7 @@
             "alt-shift-2": "pane::SplitRight",
 
             "ctrl-shift-[": "editor::Fold",
-            "ctrl-shift-]": "editor::UnfoldLines",
-            "ctrl-tab": "pane::ActivateNextItem",
-            "ctrl-shift-tab": "pane::ActivatePrevItem"
+            "ctrl-shift-]": "editor::UnfoldLines"
         }
     },
     {
