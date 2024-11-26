@@ -7,92 +7,104 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  // Basic
-  "tab_bar": {
-    "show": true
-  },
-  "base_keymap": "SublimeText",
-  "multi_cursor_modifier": "cmd_or_ctrl",
-  "cursor_blink": false,
-  "autosave": "on_focus_change",
-
-  // AI
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+    // Basic
+    "tab_bar": {
+        "show": true
     },
-    "show_hints": false,
-    "version": "2"
-  },
-  "features": {
-    "inline_completion_provider": "none"
-  },
+    "base_keymap": "SublimeText",
+    "multi_cursor_modifier": "cmd_or_ctrl",
+    "cursor_blink": false,
+    "autosave": "on_focus_change",
 
-  // Vim stuff
-  "vim_mode": true,
-  "relative_line_numbers": true,
-  "vim": {
-    "use_multiline_find": true,
-    "use_smartcase_find": true,
-    "toggle_relative_line_numbers": true
-  },
+    // AI
+    "assistant": {
+        "default_model": {
+            "provider": "zed.dev",
+            "model": "claude-3-5-sonnet-latest"
+        },
+        "show_hints": false,
+        "version": "2"
+    },
+    "features": {
+        "inline_completion_provider": "none"
+    },
 
-  // Font
-  "ui_font_size": 15,
-  "buffer_font_size": 20,
-  "buffer_font_family": "IosevkaCustom Nerd Font",
-  // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
-  // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
-  // <-> <--> <---> <----> <=> <==> <===> <====> :: ::: __
-  // <~~ </ </> /> ~~> == != /= ~= <> === !== !=== =/= =!=
-  // <: := *= *+ <* <*> *> <| <|> |> <. <.> .> +* =* =: :>
-  // (* *) /* */ [| |] {| |} ++ +++ \/ /\ |- -| <!-- <!---
-  "buffer_font_features": {
-    "calt": true
-  },
+    // Vim stuff
+    "vim_mode": true,
+    "relative_line_numbers": true,
+    "vim": {
+        "use_multiline_find": true,
+        "use_smartcase_find": true,
+        "toggle_relative_line_numbers": true
+    },
 
-  // Theme
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Andromeda"
-  },
-  "experimental.theme_overrides": {
-    "scrollbar.thumb.background": "#5555"
-  },
+    // Font
+    "ui_font_size": 15,
+    "buffer_font_size": 20,
+    "buffer_font_family": "IosevkaCustom Nerd Font",
+    // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
+    // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
+    // <-> <--> <---> <----> <=> <==> <===> <====> :: ::: __
+    // <~~ </ </> /> ~~> == != /= ~= <> === !== !=== =/= =!=
+    // <: := *= *+ <* <*> *> <| <|> |> <. <.> .> +* =* =: :>
+    // (* *) /* */ [| |] {| |} ++ +++ \/ /\ |- -| <!-- <!---
+    "buffer_font_features": {
+        "calt": true
+    },
 
-  // Other UI
-  "scrollbar": {
-    "show": "always"
-  },
-  "git": {
-    "git_gutter": "tracked_files"
-  },
-  "terminal": {
-    "dock": "right",
-    "font_size": 15,
-    "line_height": "standard",
-    "shell": {
-      "with_arguments": {
-        "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
-        // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe"
-        // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
-        "args": ["--login", "-i"]
-      }
-    }
-  },
+    // Theme
+    "theme": {
+        "mode": "system",
+        "light": "Catppuccin Latte",
+        "dark": "Andromeda"
+    },
+    "experimental.theme_overrides": {
+        "scrollbar.thumb.background": "#5555"
+    },
 
-  // Languages
-  "languages": {
-    "Python": {
-      "formatter": {
-        "external": {
-          "command": "ruff",
-          "arguments": ["format", "-"]
+    // Other UI
+    "scrollbar": {
+        "show": "always"
+    },
+    "git": {
+        "git_gutter": "tracked_files"
+    },
+    "terminal": {
+        "dock": "right",
+        "font_size": 15,
+        "line_height": "standard",
+        "shell": {
+            "with_arguments": {
+                "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
+                // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe"
+                // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
+                "args": ["--login", "-i"]
+            }
         }
-      },
-      "format_on_save": "on"
+    },
+
+    // Languages
+    "languages": {
+        "TypeScript": {
+            "tab_size": 4
+        },
+        "TSX": {
+            "tab_size": 4
+        },
+        "JSON": {
+            "tab_size": 4
+        },
+        "JSONC": {
+            "tab_size": 4
+        },
+        "Python": {
+            "formatter": {
+                "external": {
+                    "command": "ruff",
+                    "arguments": ["format", "-"]
+                }
+            },
+            "format_on_save": "on"
+        }
     }
-  }
 }

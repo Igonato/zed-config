@@ -6,255 +6,258 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-  // Misc
-  {
-    "bindings": {
-      // Navigation with alt and hjkl/arrows instead of more common ctrl-*
-      // Personal preference and keeps "ctrl-k ctrl-*" shortcuts working
-      // And Zed doesn't have a menu that would normally be activated by
-      // pressing alt and then a key, so it's a ~free real estate~
-      "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "alt-left": ["workspace::ActivatePaneInDirection", "Left"],
-      "alt-right": ["workspace::ActivatePaneInDirection", "Right"],
-      "alt-up": ["workspace::ActivatePaneInDirection", "Up"],
-      "alt-down": ["workspace::ActivatePaneInDirection", "Down"],
-      "alt-z": "pane::GoBack",
-      "alt-x": "pane::GoForward",
-      "f4": "workspace::ToggleVimMode",
-      "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
-      "f5": "assistant::ToggleFocus",
-      "ctrl-k ctrl-p": "zed::OpenSettings",
-      "ctrl-shift-`": "workspace::NewTerminal"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "f4": "terminal::ToggleViMode",
-      "ctrl-d": "pane::CloseActiveItem"
-    }
-  },
+    // Misc
+    {
+        "bindings": {
+            // Navigation with alt and hjkl/arrows instead of more common ctrl-*
+            // Personal preference and keeps "ctrl-k ctrl-*" shortcuts working
+            // And Zed doesn't have a menu that would normally be activated by
+            // pressing alt and then a key, so it's a ~free real estate~
+            "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
+            "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
+            "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
+            "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
+            "alt-left": ["workspace::ActivatePaneInDirection", "Left"],
+            "alt-right": ["workspace::ActivatePaneInDirection", "Right"],
+            "alt-up": ["workspace::ActivatePaneInDirection", "Up"],
+            "alt-down": ["workspace::ActivatePaneInDirection", "Down"],
+            "alt-z": "pane::GoBack",
+            "alt-x": "pane::GoForward",
+            "f4": "workspace::ToggleVimMode",
+            "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
+            "f5": "assistant::ToggleFocus",
+            "ctrl-k ctrl-p": "zed::OpenSettings",
+            "ctrl-shift-`": "workspace::NewTerminal"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "f4": "terminal::ToggleViMode",
+            "ctrl-d": "pane::CloseActiveItem"
+        }
+    },
 
-  // Fix missing or incorrect Sublime Text bindings
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
-      "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
-      "ctrl-alt-j": "editor::AddSelectionBelow", // Insert Cursor Below
-      "ctrl-alt-k": "editor::AddSelectionAbove", // Insert Cursor Above
-      // "ctrl-;": "buffer_search::Fuzzy" // Not yet supported ? as of 2024-11-19
-      "alt--": "pane::GoBack",
-      "alt-shift--": "pane::GoForward",
+    // Fix missing or incorrect Sublime Text bindings
+    {
+        "context": "Editor",
+        "bindings": {
+            "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
+            "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
+            "ctrl-alt-j": "editor::AddSelectionBelow", // Insert Cursor Below
+            "ctrl-alt-k": "editor::AddSelectionAbove", // Insert Cursor Above
+            // "ctrl-;": "buffer_search::Fuzzy" // Not yet supported ? as of 2024-11-19
+            "alt--": "pane::GoBack",
+            "alt-shift--": "pane::GoForward",
 
-      // "f2": // Bookmarks are not yet supported ? as of 2024-11-19
-      // "f6": // spellcheck feature is missing ? as of 2024-11-19
-      // "f7": // build??? probably belongs in the Workspace context
-      "f9": "editor::SortLinesCaseSensitive",
-      "ctrl-f9": "editor::SortLinesCaseInsensitive",
-      // Layout presets are not yet supported ? as of 2024-11-19
-      // try workspace::SendKeystrokes maybe?
-      "alt-shift-2": "pane::SplitRight",
+            // "f2": // Bookmarks are not yet supported ? as of 2024-11-19
+            // "f6": // spellcheck feature is missing ? as of 2024-11-19
+            // "f7": // build??? probably belongs in the Workspace context
+            "f9": "editor::SortLinesCaseSensitive",
+            "ctrl-f9": "editor::SortLinesCaseInsensitive",
+            // Layout presets are not yet supported ? as of 2024-11-19
+            // try workspace::SendKeystrokes maybe?
+            "alt-shift-2": "pane::SplitRight",
 
-      "ctrl-shift-[": "editor::Fold",
-      "ctrl-shift-]": "editor::UnfoldLines",
-      "ctrl-tab": "pane::ActivateNextItem",
-      "ctrl-shift-tab": "pane::ActivatePrevItem"
-    }
-  },
-  {
-    // "context": "Workspace",
-    "bindings": {
-      // "ctrl-0": "project_panel::ToggleFocus", // Forgoing in favor of the reset zoom
-      "ctrl-1": ["workspace::ActivatePane", 0],
-      "ctrl-2": ["workspace::ActivatePane", 1],
-      "ctrl-3": ["workspace::ActivatePane", 2],
-      "ctrl-4": ["workspace::ActivatePane", 3],
-      "ctrl-5": ["workspace::ActivatePane", 4],
-      "ctrl-6": ["workspace::ActivatePane", 5],
-      "ctrl-7": ["workspace::ActivatePane", 6],
-      "ctrl-8": ["workspace::ActivatePane", 7],
-      "ctrl-9": ["workspace::ActivatePane", 8]
+            "ctrl-shift-[": "editor::Fold",
+            "ctrl-shift-]": "editor::UnfoldLines",
+            "ctrl-tab": "pane::ActivateNextItem",
+            "ctrl-shift-tab": "pane::ActivatePrevItem"
+        }
+    },
+    {
+        // "context": "Workspace",
+        "bindings": {
+            // "ctrl-0": "project_panel::ToggleFocus", // Forgoing in favor of the reset zoom
+            "ctrl-1": ["workspace::ActivatePane", 0],
+            "ctrl-2": ["workspace::ActivatePane", 1],
+            "ctrl-3": ["workspace::ActivatePane", 2],
+            "ctrl-4": ["workspace::ActivatePane", 3],
+            "ctrl-5": ["workspace::ActivatePane", 4],
+            "ctrl-6": ["workspace::ActivatePane", 5],
+            "ctrl-7": ["workspace::ActivatePane", 6],
+            "ctrl-8": ["workspace::ActivatePane", 7],
+            "ctrl-9": ["workspace::ActivatePane", 8]
 
-      // Not yet supported ? as of 2024-11-19
-      // "ctrl-shift-1": ["workspace::MoveToPane", 0],
-      // "ctrl-shift-2": ["workspace::MoveToPane", 1],
-      // "ctrl-shift-3": ["workspace::MoveToPane", 2],
-      // "ctrl-shift-4": ["workspace::MoveToPane", 3],
-      // "ctrl-shift-5": ["workspace::MoveToPane", 4],
-      // "ctrl-shift-6": ["workspace::MoveToPane", 5],
-      // "ctrl-shift-7": ["workspace::MoveToPane", 6],
-      // "ctrl-shift-8": ["workspace::MoveToPane", 7],
-      // "ctrl-shift-9": ["workspace::MoveToPane", 8]
-    }
-  },
+            // Not yet supported ? as of 2024-11-19
+            // "ctrl-shift-1": ["workspace::MoveToPane", 0],
+            // "ctrl-shift-2": ["workspace::MoveToPane", 1],
+            // "ctrl-shift-3": ["workspace::MoveToPane", 2],
+            // "ctrl-shift-4": ["workspace::MoveToPane", 3],
+            // "ctrl-shift-5": ["workspace::MoveToPane", 4],
+            // "ctrl-shift-6": ["workspace::MoveToPane", 5],
+            // "ctrl-shift-7": ["workspace::MoveToPane", 6],
+            // "ctrl-shift-8": ["workspace::MoveToPane", 7],
+            // "ctrl-shift-9": ["workspace::MoveToPane", 8]
+        }
+    },
 
-  // Vim (heavily borrowed from https://github.com/jellydn/zed-101-setup/)
-  {
-    // Restore some standard hotkeys which are just too deep in the muscle memory
-    "context": "!Terminal",
-    "bindings": {
-      "ctrl-v": "editor::Paste",
-      "ctrl-c": "editor::Copy",
-      "ctrl-s": "workspace::Save",
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-f": "buffer_search::Deploy",
-      "ctrl-[": "editor::Outdent",
-      "ctrl-]": "editor::Indent"
-    }
-  },
-  {
-    // Standard ctrl-w * with space w * instead
-    // TODO: remove more weird ones
-    "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
-    "use_layout_keys": true,
-    "bindings": {
-      // window related commands (ctrl-w X)
-      "space w left": ["workspace::ActivatePaneInDirection", "Left"],
-      "space w right": ["workspace::ActivatePaneInDirection", "Right"],
-      "space w up": ["workspace::ActivatePaneInDirection", "Up"],
-      "space w down": ["workspace::ActivatePaneInDirection", "Down"],
-      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
-      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
-      "space w ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "space w ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "space w ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "space w ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "space w shift-left": ["workspace::SwapPaneInDirection", "Left"],
-      "space w shift-right": ["workspace::SwapPaneInDirection", "Right"],
-      "space w shift-up": ["workspace::SwapPaneInDirection", "Up"],
-      "space w shift-down": ["workspace::SwapPaneInDirection", "Down"],
-      "space w shift-h": ["workspace::SwapPaneInDirection", "Left"],
-      "space w shift-l": ["workspace::SwapPaneInDirection", "Right"],
-      "space w shift-k": ["workspace::SwapPaneInDirection", "Up"],
-      "space w shift-j": ["workspace::SwapPaneInDirection", "Down"],
-      "space w g t": "pane::ActivateNextItem",
-      "space w ctrl-g t": "pane::ActivateNextItem",
-      "space w g shift-t": "pane::ActivatePrevItem",
-      "space w ctrl-g shift-t": "pane::ActivatePrevItem",
-      "space w w": "workspace::ActivateNextPane",
-      "space w ctrl-w": "workspace::ActivateNextPane",
-      "space w p": "workspace::ActivatePreviousPane",
-      "space w ctrl-p": "workspace::ActivatePreviousPane",
-      "space w shift-w": "workspace::ActivatePreviousPane",
-      "space w ctrl-shift-w": "workspace::ActivatePreviousPane",
-      "space w v": "pane::SplitVertical",
-      "space w ctrl-v": "pane::SplitVertical",
-      "space w s": "pane::SplitHorizontal",
-      "space w shift-s": "pane::SplitHorizontal",
-      "space w ctrl-s": "pane::SplitHorizontal",
-      "space w c": "pane::CloseAllItems",
-      "space w ctrl-c": "pane::CloseAllItems",
-      "space w q": "pane::CloseAllItems",
-      "space w ctrl-q": "pane::CloseAllItems",
-      "space w o": "workspace::CloseInactiveTabsAndPanes",
-      "space w ctrl-o": "workspace::CloseInactiveTabsAndPanes",
-      "space w n": "workspace::NewFileSplitHorizontal",
-      "space w ctrl-n": "workspace::NewFileSplitHorizontal"
-    }
-  },
-  {
-    // Normal & visual mode
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
-    "bindings": {
-      "space g h d": "editor::ToggleHunkDiff",
-      "space g h r": "editor::RevertSelectedHunks",
-      "space t i": "editor::ToggleInlayHints",
-      "space t e": "workspace::ToggleLeftDock",
-      "space u w": "editor::ToggleSoftWrap",
-      "space m p": "markdown::OpenPreview",
-      "space m P": "markdown::OpenPreviewToTheSide",
-      "space f p": "projects::OpenRecent",
-      "space s w": "pane::DeploySearch",
-      "space a c": "assistant::ToggleFocus",
-      "space r t": "task::Spawn",
-      "space r r": "task::Rerun"
-    }
-  },
-  {
-    // Normal mode only
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-    "bindings": {
-      // +LSP
-      "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions",
-      "space c r": "editor::Rename",
-      "g d": "editor::GoToDefinition",
-      "g D": "editor::GoToDefinitionSplit",
-      "g i": "editor::GoToImplementation",
-      "g I": "editor::GoToImplementationSplit",
-      "g t": "editor::GoToTypeDefinition",
-      "g T": "editor::GoToTypeDefinitionSplit",
-      "g r": "editor::FindAllReferences",
+    // Vim (heavily borrowed from https://github.com/jellydn/zed-101-setup/)
+    {
+        // Restore some standard hotkeys which are just too deep in the muscle memory
+        "context": "!Terminal",
+        "bindings": {
+            "ctrl-v": "editor::Paste",
+            "ctrl-c": "editor::Copy",
+            "ctrl-s": "workspace::Save",
+            "ctrl-w": "pane::CloseActiveItem",
+            "ctrl-q": "workspace::CloseWindow",
+            "ctrl-f": "buffer_search::Deploy",
+            "ctrl-[": "editor::Outdent",
+            "ctrl-]": "editor::Indent"
+        }
+    },
+    {
+        // Standard ctrl-w * with space w * instead
+        // TODO: remove more weird ones
+        "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
+        "use_layout_keys": true,
+        "bindings": {
+            // window related commands (ctrl-w X)
+            "space w left": ["workspace::ActivatePaneInDirection", "Left"],
+            "space w right": ["workspace::ActivatePaneInDirection", "Right"],
+            "space w up": ["workspace::ActivatePaneInDirection", "Up"],
+            "space w down": ["workspace::ActivatePaneInDirection", "Down"],
+            "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+            "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+            "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+            "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+            "space w ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+            "space w ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+            "space w ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+            "space w ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+            "space w shift-left": ["workspace::SwapPaneInDirection", "Left"],
+            "space w shift-right": ["workspace::SwapPaneInDirection", "Right"],
+            "space w shift-up": ["workspace::SwapPaneInDirection", "Up"],
+            "space w shift-down": ["workspace::SwapPaneInDirection", "Down"],
+            "space w shift-h": ["workspace::SwapPaneInDirection", "Left"],
+            "space w shift-l": ["workspace::SwapPaneInDirection", "Right"],
+            "space w shift-k": ["workspace::SwapPaneInDirection", "Up"],
+            "space w shift-j": ["workspace::SwapPaneInDirection", "Down"],
+            "space w g t": "pane::ActivateNextItem",
+            "space w ctrl-g t": "pane::ActivateNextItem",
+            "space w g shift-t": "pane::ActivatePrevItem",
+            "space w ctrl-g shift-t": "pane::ActivatePrevItem",
+            "space w w": "workspace::ActivateNextPane",
+            "space w ctrl-w": "workspace::ActivateNextPane",
+            "space w p": "workspace::ActivatePreviousPane",
+            "space w ctrl-p": "workspace::ActivatePreviousPane",
+            "space w shift-w": "workspace::ActivatePreviousPane",
+            "space w ctrl-shift-w": "workspace::ActivatePreviousPane",
+            "space w v": "pane::SplitVertical",
+            "space w ctrl-v": "pane::SplitVertical",
+            "space w s": "pane::SplitHorizontal",
+            "space w shift-s": "pane::SplitHorizontal",
+            "space w ctrl-s": "pane::SplitHorizontal",
+            "space w c": "pane::CloseAllItems",
+            "space w ctrl-c": "pane::CloseAllItems",
+            "space w q": "pane::CloseAllItems",
+            "space w ctrl-q": "pane::CloseAllItems",
+            "space w o": "workspace::CloseInactiveTabsAndPanes",
+            "space w ctrl-o": "workspace::CloseInactiveTabsAndPanes",
+            "space w n": "workspace::NewFileSplitHorizontal",
+            "space w ctrl-n": "workspace::NewFileSplitHorizontal"
+        }
+    },
+    {
+        // Normal & visual mode
+        "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+        "bindings": {
+            "space g h d": "editor::ToggleHunkDiff",
+            "space g h r": "editor::RevertSelectedHunks",
+            "space t i": "editor::ToggleInlayHints",
+            "space t e": "workspace::ToggleLeftDock",
+            "space u w": "editor::ToggleSoftWrap",
+            "space m p": "markdown::OpenPreview",
+            "space m P": "markdown::OpenPreviewToTheSide",
+            "space f p": "projects::OpenRecent",
+            "space s w": "pane::DeploySearch",
+            "space a c": "assistant::ToggleFocus",
+            "space r t": "task::Spawn",
+            "space r r": "task::Rerun"
+        }
+    },
+    {
+        // Normal mode only
+        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+        "bindings": {
+            "shift-u": "vim::Redo",
+            // +LSP
+            "space c a": "editor::ToggleCodeActions",
+            "space .": "editor::ToggleCodeActions",
+            "space c r": "editor::Rename",
+            "g d": "editor::GoToDefinition",
+            "g D": "editor::GoToDefinitionSplit",
+            "g i": "editor::GoToImplementation",
+            "g I": "editor::GoToImplementationSplit",
+            "g t": "editor::GoToTypeDefinition",
+            "g T": "editor::GoToTypeDefinitionSplit",
+            "g r": "editor::FindAllReferences",
 
-      // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
+            // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
 
-      // + Buffers
-      // Switch between buffers
-      "shift-h": "pane::ActivatePrevItem",
-      "shift-l": "pane::ActivateNextItem",
-      // Close active panel
-      "shift-q": "pane::CloseActiveItem",
-      "space b d": "pane::CloseActiveItem",
-      // Close other items
-      "space b o": "pane::CloseInactiveItems",
-      // File finder
-      "space space": "file_finder::Toggle",
-      // Project search
-      "space /": "pane::DeploySearch",
-      // TODO: Open other files
-      // Show project panel with current file
-      "space e": "pane::RevealInProjectPanel"
+            // + Buffers
+            // Switch between buffers
+            "shift-h": "pane::ActivatePrevItem",
+            "shift-l": "pane::ActivateNextItem",
+            // Close active panel
+            "shift-q": "pane::CloseActiveItem",
+            "space b d": "pane::CloseActiveItem",
+            // Close other items
+            "space b o": "pane::CloseInactiveItems",
+            // File finder
+            "space space": "file_finder::Toggle",
+            // Project search
+            "space /": "pane::DeploySearch",
+            // TODO: Open other files
+            // Show project panel with current file
+            "space e": "pane::RevealInProjectPanel"
+        }
+    },
+    {
+        // Visual mode only
+        "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+        "bindings": {
+            "shift-j": "editor::MoveLineDown",
+            "shift-k": "editor::MoveLineUp"
+        }
+    },
+    {
+        // Insert mode only
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            "ctrl-r": ["vim::PushOperator", "Register"],
+            "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
+            "j j": "vim::NormalBefore",
+            "j k": "vim::NormalBefore"
+        }
+    },
+    // Empty pane, set of keybindings that are available when there is no active editor
+    {
+        "context": "EmptyPane || SharedScreen",
+        "bindings": {
+            // Open file finder
+            "space space": "file_finder::Toggle",
+            // Open recent project
+            "space f p": "projects::OpenRecent"
+        }
+    },
+    // File panel (netrw)
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory",
+            "n": "project_panel::NewDirectory",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Delete",
+            "ctrl-shift-d": "project_panel::Duplicate",
+            "x": "project_panel::Cut",
+            "c": "project_panel::Copy",
+            "p": "project_panel::Paste",
+            // Close project panel as project file panel on the right
+            "q": "workspace::ToggleRightDock",
+            "space e": "workspace::ToggleRightDock"
+        }
     }
-  },
-  {
-    // Visual mode only
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      "shift-j": "editor::MoveLineDown",
-      "shift-k": "editor::MoveLineUp"
-    }
-  },
-  {
-    // Insert mode only
-    "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-      "ctrl-r": ["vim::PushOperator", "Register"],
-      "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
-      "j j": "vim::NormalBefore",
-      "j k": "vim::NormalBefore"
-    }
-  },
-  // Empty pane, set of keybindings that are available when there is no active editor
-  {
-    "context": "EmptyPane || SharedScreen",
-    "bindings": {
-      // Open file finder
-      "space space": "file_finder::Toggle",
-      // Open recent project
-      "space f p": "projects::OpenRecent"
-    }
-  },
-  // File panel (netrw)
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "a": "project_panel::NewFile",
-      "A": "project_panel::NewDirectory",
-      "r": "project_panel::Rename",
-      "d": "project_panel::Delete",
-      "ctrl-shift-d": "project_panel::Duplicate",
-      "x": "project_panel::Cut",
-      "c": "project_panel::Copy",
-      "p": "project_panel::Paste",
-      // Close project panel as project file panel on the right
-      "q": "workspace::ToggleRightDock",
-      "space e": "workspace::ToggleRightDock"
-    }
-  }
 ]
