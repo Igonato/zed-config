@@ -15,6 +15,7 @@
     "multi_cursor_modifier": "cmd_or_ctrl",
     "cursor_blink": false,
     "autosave": "on_focus_change",
+    "wrap_guides": [80],
 
     // AI
     "assistant": {
@@ -70,6 +71,9 @@
         "git_gutter": "tracked_files"
     },
     "terminal": {
+        "toolbar": {
+            "breadcrumbs": false
+        },
         "dock": "right",
         "font_size": 15,
         "line_height": "standard",

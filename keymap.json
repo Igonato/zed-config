@@ -167,7 +167,7 @@
             "space g h r": "editor::RevertSelectedHunks",
             "space t i": "editor::ToggleInlayHints",
             "space t e": "workspace::ToggleLeftDock",
-            "space u w": "editor::ToggleSoftWrap",
+            "space t w": "editor::ToggleSoftWrap",
             "space m p": "markdown::OpenPreview",
             "space m P": "markdown::OpenPreviewToTheSide",
             "space f p": "projects::OpenRecent",
