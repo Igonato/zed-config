@@ -232,6 +232,7 @@
         // Insert mode only
         "context": "Editor && vim_mode == insert && !menu",
         "bindings": {
+            "ctrl-x": "editor::Cut",
             "ctrl-r": ["vim::PushOperator", "Register"],
             "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
             "j j": "vim::NormalBefore",

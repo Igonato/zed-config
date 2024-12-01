@@ -5,12 +5,14 @@
     {
         "label": "Odin: run file",
         "command": "odin run $ZED_FILE -file",
+        "cwd": "$ZED_DIRNAME",
         "reveal": "no_focus"
     },
     {
         // Requires watchexec (`cargo install --locked watchexec-cli`)
         "label": "Odin: run file + watch and rerun on changes",
-        "command": "watchexec -c -w '$ZED_FILE' odin run $ZED_FILE -file",
+        "command": "watchexec -r -c -w '$ZED_FILE' odin run '$ZED_FILE' -file",
+        "cwd": "$ZED_DIRNAME",
         "reveal": "no_focus"
     }
 ]
