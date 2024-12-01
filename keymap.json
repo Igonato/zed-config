@@ -36,7 +36,11 @@
         "context": "Terminal",
         "bindings": {
             "f4": "terminal::ToggleViMode",
-            "ctrl-d": "pane::CloseActiveItem"
+            "ctrl-d": "pane::CloseActiveItem",
+            "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
+            "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
+            "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
+            "alt-j": ["workspace::ActivatePaneInDirection", "Down"]
         }
     },
 
@@ -172,7 +176,8 @@
             "space m P": "markdown::OpenPreviewToTheSide",
             "space f p": "projects::OpenRecent",
             "space s w": "pane::DeploySearch",
-            "space a c": "assistant::ToggleFocus",
+            "space t a": "assistant::ToggleFocus",
+            "space a c": "assistant::CopyCode",
             "space r t": "task::Spawn",
             "space r r": "task::Rerun"
         }
@@ -193,6 +198,7 @@
             "g t": "editor::GoToTypeDefinition",
             "g T": "editor::GoToTypeDefinitionSplit",
             "g r": "editor::FindAllReferences",
+            "g l": "editor::OpenUrl",
 
             // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
 

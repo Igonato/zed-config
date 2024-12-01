@@ -40,8 +40,8 @@
     },
 
     // Font
-    "ui_font_size": 15,
-    "buffer_font_size": 20,
+    "ui_font_size": 16,
+    "buffer_font_size": 21,
     "buffer_font_family": "IosevkaCustom Nerd Font",
     // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
     // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
@@ -75,12 +75,12 @@
             "breadcrumbs": false
         },
         "dock": "right",
-        "font_size": 15,
+        "font_size": 16,
         "line_height": "standard",
         "shell": {
             "with_arguments": {
                 "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
-                // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe"
+                // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe",
                 // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
                 "args": ["--login", "-i"]
             }
@@ -97,6 +97,16 @@
         },
         "JSON": {
             "tab_size": 4
+        },
+        "Markdown": {
+            "indent_guides": {
+                "enabled": false
+            }
+        },
+        "Markdown-Inline": {
+            "indent_guides": {
+                "enabled": false
+            }
         },
         "JSONC": {
             "tab_size": 4
