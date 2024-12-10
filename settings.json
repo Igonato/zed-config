@@ -16,6 +16,7 @@
     "cursor_blink": false,
     "autosave": "on_focus_change",
     "wrap_guides": [80, 100],
+    "vertical_scroll_margin": 7,
 
     // AI
     "assistant": {
@@ -64,6 +65,7 @@
     },
 
     // Other UI
+    "line_indicator_format": "long",
     "scrollbar": {
         "show": "always"
     },
@@ -112,7 +114,8 @@
             "tab_size": 4
         },
         "Odin": {
-            // "format_on_save": "off"
+            "format_on_save": "off",
+            "hard_tabs": true
         },
         "Python": {
             "formatter": {

@@ -17,6 +17,10 @@
             "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
             "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
             "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
+            "alt-shift-h": ["workspace::MoveItemToPaneInDirection", "Left"],
+            "alt-shift-l": ["workspace::MoveItemToPaneInDirection", "Right"],
+            "alt-shift-k": ["workspace::MoveItemToPaneInDirection", "Up"],
+            "alt-shift-j": ["workspace::MoveItemToPaneInDirection", "Down"],
             "alt-left": ["workspace::ActivatePaneInDirection", "Left"],
             "alt-right": ["workspace::ActivatePaneInDirection", "Right"],
             "alt-up": ["workspace::ActivatePaneInDirection", "Up"],
@@ -40,7 +44,11 @@
             "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
             "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
             "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
-            "alt-j": ["workspace::ActivatePaneInDirection", "Down"]
+            "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
+            "alt-shift-h": ["workspace::MoveItemToPaneInDirection", "Left"],
+            "alt-shift-l": ["workspace::MoveItemToPaneInDirection", "Right"],
+            "alt-shift-k": ["workspace::MoveItemToPaneInDirection", "Up"],
+            "alt-shift-j": ["workspace::MoveItemToPaneInDirection", "Down"]
         }
     },
 
@@ -81,18 +89,18 @@
             "ctrl-6": ["workspace::ActivatePane", 5],
             "ctrl-7": ["workspace::ActivatePane", 6],
             "ctrl-8": ["workspace::ActivatePane", 7],
-            "ctrl-9": ["workspace::ActivatePane", 8]
+            "ctrl-9": ["workspace::ActivatePane", 8],
 
             // Not yet supported ? as of 2024-11-19
-            // "ctrl-shift-1": ["workspace::MoveToPane", 0],
-            // "ctrl-shift-2": ["workspace::MoveToPane", 1],
-            // "ctrl-shift-3": ["workspace::MoveToPane", 2],
-            // "ctrl-shift-4": ["workspace::MoveToPane", 3],
-            // "ctrl-shift-5": ["workspace::MoveToPane", 4],
-            // "ctrl-shift-6": ["workspace::MoveToPane", 5],
-            // "ctrl-shift-7": ["workspace::MoveToPane", 6],
-            // "ctrl-shift-8": ["workspace::MoveToPane", 7],
-            // "ctrl-shift-9": ["workspace::MoveToPane", 8]
+            "ctrl-shift-1": ["workspace::MoveItemToPane", 0],
+            "ctrl-shift-2": ["workspace::MoveItemToPane", 1],
+            "ctrl-shift-3": ["workspace::MoveItemToPane", 2],
+            "ctrl-shift-4": ["workspace::MoveItemToPane", 3],
+            "ctrl-shift-5": ["workspace::MoveItemToPane", 4],
+            "ctrl-shift-6": ["workspace::MoveItemToPane", 5],
+            "ctrl-shift-7": ["workspace::MoveItemToPane", 6],
+            "ctrl-shift-8": ["workspace::MoveItemToPane", 7],
+            "ctrl-shift-9": ["workspace::MoveItemToPane", 8]
         }
     },
 
@@ -198,6 +206,8 @@
             "g t": "editor::GoToTypeDefinition",
             "g T": "editor::GoToTypeDefinitionSplit",
             "g r": "editor::FindAllReferences",
+            "g b": "pane::GoBack",
+            "g f": "pane::GoForward",
             "g l": "editor::OpenUrl",
 
             // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
