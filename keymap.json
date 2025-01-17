@@ -17,10 +17,38 @@
             "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
             "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
             "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
-            "alt-shift-h": ["workspace::MoveItemToPaneInDirection", "Left"],
-            "alt-shift-l": ["workspace::MoveItemToPaneInDirection", "Right"],
-            "alt-shift-k": ["workspace::MoveItemToPaneInDirection", "Up"],
-            "alt-shift-j": ["workspace::MoveItemToPaneInDirection", "Down"],
+            "alt-shift-h": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Left" }
+            ],
+            "alt-shift-l": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Right" }
+            ],
+            "alt-shift-k": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Up" }
+            ],
+            "alt-shift-j": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Down" }
+            ],
+            "ctrl-alt-shift-h": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Left", "focus": false }
+            ],
+            "ctrl-alt-shift-l": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Right", "focus": false }
+            ],
+            "ctrl-alt-shift-k": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Up", "focus": false }
+            ],
+            "ctrl-alt-shift-j": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "Down", "focus": false }
+            ],
             "alt-left": ["workspace::ActivatePaneInDirection", "Left"],
             "alt-right": ["workspace::ActivatePaneInDirection", "Right"],
             "alt-up": ["workspace::ActivatePaneInDirection", "Up"],
@@ -32,6 +60,7 @@
             "f5": "assistant::ToggleFocus",
             "ctrl-k ctrl-p": "zed::OpenSettings",
             "ctrl-shift-`": "workspace::NewTerminal",
+            "ctrl-t": "workspace::NewFile",
             "ctrl-tab": "pane::ActivateNextItem",
             "ctrl-shift-tab": "pane::ActivatePrevItem"
         }
@@ -40,26 +69,19 @@
         "context": "Terminal",
         "bindings": {
             "f4": "terminal::ToggleViMode",
-            "ctrl-d": "pane::CloseActiveItem",
-            "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
-            "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
-            "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
-            "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
-            "alt-shift-h": ["workspace::MoveItemToPaneInDirection", "Left"],
-            "alt-shift-l": ["workspace::MoveItemToPaneInDirection", "Right"],
-            "alt-shift-k": ["workspace::MoveItemToPaneInDirection", "Up"],
-            "alt-shift-j": ["workspace::MoveItemToPaneInDirection", "Down"]
+            "ctrl-d": "pane::CloseActiveItem"
         }
     },
 
-    // Fix missing or incorrect Sublime Text bindings
     {
         "context": "Editor",
         "bindings": {
-            "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
-            "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
+            "ctrl-shift-k": "editor::MoveLineUp",
+            "ctrl-shift-j": "editor::MoveLineDown",
             "ctrl-alt-j": "editor::AddSelectionBelow", // Insert Cursor Below
             "ctrl-alt-k": "editor::AddSelectionAbove", // Insert Cursor Above
+
+            // Fix missing or incorrect Sublime Text bindings
             // "ctrl-;": "buffer_search::Fuzzy" // Not yet supported ? as of 2024-11-19
             "alt--": "pane::GoBack",
             "alt-shift--": "pane::GoForward",
@@ -67,8 +89,6 @@
             // "f2": // Bookmarks are not yet supported ? as of 2024-11-19
             // "f6": // spellcheck feature is missing ? as of 2024-11-19
             // "f7": // build??? probably belongs in the Workspace context
-            "f9": "editor::SortLinesCaseSensitive",
-            "ctrl-f9": "editor::SortLinesCaseInsensitive",
             // Layout presets are not yet supported ? as of 2024-11-19
             // try workspace::SendKeystrokes maybe?
             "alt-shift-2": "pane::SplitRight",
@@ -81,26 +101,6 @@
         // "context": "Workspace",
         "bindings": {
             // "ctrl-0": "project_panel::ToggleFocus", // Forgoing in favor of the reset zoom
-            "ctrl-1": ["workspace::ActivatePane", 0],
-            "ctrl-2": ["workspace::ActivatePane", 1],
-            "ctrl-3": ["workspace::ActivatePane", 2],
-            "ctrl-4": ["workspace::ActivatePane", 3],
-            "ctrl-5": ["workspace::ActivatePane", 4],
-            "ctrl-6": ["workspace::ActivatePane", 5],
-            "ctrl-7": ["workspace::ActivatePane", 6],
-            "ctrl-8": ["workspace::ActivatePane", 7],
-            "ctrl-9": ["workspace::ActivatePane", 8],
-
-            // Not yet supported ? as of 2024-11-19
-            "ctrl-shift-1": ["workspace::MoveItemToPane", 0],
-            "ctrl-shift-2": ["workspace::MoveItemToPane", 1],
-            "ctrl-shift-3": ["workspace::MoveItemToPane", 2],
-            "ctrl-shift-4": ["workspace::MoveItemToPane", 3],
-            "ctrl-shift-5": ["workspace::MoveItemToPane", 4],
-            "ctrl-shift-6": ["workspace::MoveItemToPane", 5],
-            "ctrl-shift-7": ["workspace::MoveItemToPane", 6],
-            "ctrl-shift-8": ["workspace::MoveItemToPane", 7],
-            "ctrl-shift-9": ["workspace::MoveItemToPane", 8]
         }
     },
 

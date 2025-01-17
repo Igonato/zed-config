@@ -91,6 +91,11 @@
 
     // Languages
     "languages": {
+        "Rust": {
+            "inlay_hints": {
+                "enabled": true
+            }
+        },
         "TypeScript": {
             "tab_size": 4
         },
@@ -126,5 +131,10 @@
             },
             "format_on_save": "on"
         }
+    },
+
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
     }
 }
