@@ -123,7 +123,6 @@
         // Standard ctrl-w * with space w * instead
         // TODO: remove more weird ones
         "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
-        "use_layout_keys": true,
         "bindings": {
             // window related commands (ctrl-w X)
             "space w left": ["workspace::ActivatePaneInDirection", "Left"],
@@ -175,7 +174,6 @@
         // Normal & visual mode
         "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
         "bindings": {
-            "space g h d": "editor::ToggleHunkDiff",
             "space g h r": "editor::RevertSelectedHunks",
             "space t i": "editor::ToggleInlayHints",
             "space t e": "workspace::ToggleLeftDock",
