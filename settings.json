@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     // Basic
+    "show_edit_predictions": false,
     "tab_bar": {
         "show": true
     },
@@ -28,7 +29,7 @@
         "version": "2"
     },
     "features": {
-        "inline_completion_provider": "none"
+        "edit_prediction_provider": "zed"
     },
 
     // Vim stuff
@@ -41,8 +42,8 @@
     },
 
     // Font
-    "ui_font_size": 16,
-    "buffer_font_size": 21,
+    "ui_font_size": 18,
+    "buffer_font_size": 21.0,
     "buffer_font_family": "IosevkaCustom Nerd Font",
     // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
     // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
@@ -58,7 +59,7 @@
     "theme": {
         "mode": "system",
         "light": "Catppuccin Latte",
-        "dark": "Andromeda"
+        "dark": "Zed Legacy:  Andromeda"
     },
     "experimental.theme_overrides": {
         "scrollbar.thumb.background": "#5555"
@@ -78,15 +79,15 @@
         },
         "dock": "right",
         "font_size": 16,
-        "line_height": "standard",
-        "shell": {
-            "with_arguments": {
-                "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
-                // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe",
-                // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
-                "args": ["--login", "-i"]
-            }
-        }
+        "line_height": "standard"
+        // "shell": {
+        //     "with_arguments": {
+        //         "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
+        //         // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe",
+        //         // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
+        //         "args": ["--login", "-i"]
+        //     }
+        // }
     },
 
     // Languages

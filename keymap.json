@@ -13,46 +13,78 @@
             // Personal preference and keeps "ctrl-k ctrl-*" shortcuts working
             // And Zed doesn't have a menu that would normally be activated by
             // pressing alt and then a key, so it's a ~free real estate~
-            "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
-            "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
-            "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
-            "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
+            "alt-h": "workspace::ActivatePaneLeft",
+            "alt-l": "workspace::ActivatePaneRight",
+            "alt-k": "workspace::ActivatePaneUp",
+            "alt-j": "workspace::ActivatePaneDown",
+            "alt-left": "workspace::ActivatePaneLeft",
+            "alt-right": "workspace::ActivatePaneRight",
+            "alt-up": "workspace::ActivatePaneUp",
+            "alt-down": "workspace::ActivatePaneDown",
             "alt-shift-h": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Left" }
+                { "direction": "left" }
             ],
             "alt-shift-l": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Right" }
+                { "direction": "right" }
             ],
             "alt-shift-k": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Up" }
+                { "direction": "up" }
             ],
             "alt-shift-j": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Down" }
+                { "direction": "down" }
+            ],
+            "alt-shift-left": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "left" }
+            ],
+            "alt-shift-right": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "right" }
+            ],
+            "alt-shift-up": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "up" }
+            ],
+            "alt-shift-down": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "down" }
             ],
             "ctrl-alt-shift-h": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Left", "focus": false }
+                { "direction": "left", "focus": false }
             ],
             "ctrl-alt-shift-l": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Right", "focus": false }
+                { "direction": "right", "focus": false }
             ],
             "ctrl-alt-shift-k": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Up", "focus": false }
+                { "direction": "up", "focus": false }
             ],
             "ctrl-alt-shift-j": [
                 "workspace::MoveItemToPaneInDirection",
-                { "direction": "Down", "focus": false }
+                { "direction": "down", "focus": false }
             ],
-            "alt-left": ["workspace::ActivatePaneInDirection", "Left"],
-            "alt-right": ["workspace::ActivatePaneInDirection", "Right"],
-            "alt-up": ["workspace::ActivatePaneInDirection", "Up"],
-            "alt-down": ["workspace::ActivatePaneInDirection", "Down"],
+            "ctrl-alt-shift-left": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "left", "focus": false }
+            ],
+            "ctrl-alt-shift-right": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "right", "focus": false }
+            ],
+            "ctrl-alt-shift-up": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "up", "focus": false }
+            ],
+            "ctrl-alt-shift-down": [
+                "workspace::MoveItemToPaneInDirection",
+                { "direction": "down", "focus": false }
+            ],
             "alt-z": "pane::GoBack",
             "alt-x": "pane::GoForward",
             "f4": "workspace::ToggleVimMode",
@@ -92,6 +124,7 @@
             // Layout presets are not yet supported ? as of 2024-11-19
             // try workspace::SendKeystrokes maybe?
             "alt-shift-2": "pane::SplitRight",
+            "alt-shift-@": "pane::SplitRight",
 
             "ctrl-shift-[": "editor::Fold",
             "ctrl-shift-]": "editor::UnfoldLines"
@@ -125,26 +158,26 @@
         "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
         "bindings": {
             // window related commands (ctrl-w X)
-            "space w left": ["workspace::ActivatePaneInDirection", "Left"],
-            "space w right": ["workspace::ActivatePaneInDirection", "Right"],
-            "space w up": ["workspace::ActivatePaneInDirection", "Up"],
-            "space w down": ["workspace::ActivatePaneInDirection", "Down"],
-            "space w h": ["workspace::ActivatePaneInDirection", "Left"],
-            "space w l": ["workspace::ActivatePaneInDirection", "Right"],
-            "space w k": ["workspace::ActivatePaneInDirection", "Up"],
-            "space w j": ["workspace::ActivatePaneInDirection", "Down"],
-            "space w ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-            "space w ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-            "space w ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-            "space w ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-            "space w shift-left": ["workspace::SwapPaneInDirection", "Left"],
-            "space w shift-right": ["workspace::SwapPaneInDirection", "Right"],
-            "space w shift-up": ["workspace::SwapPaneInDirection", "Up"],
-            "space w shift-down": ["workspace::SwapPaneInDirection", "Down"],
-            "space w shift-h": ["workspace::SwapPaneInDirection", "Left"],
-            "space w shift-l": ["workspace::SwapPaneInDirection", "Right"],
-            "space w shift-k": ["workspace::SwapPaneInDirection", "Up"],
-            "space w shift-j": ["workspace::SwapPaneInDirection", "Down"],
+            "space w left": "workspace::ActivatePaneLeft",
+            "space w right": "workspace::ActivatePaneRight",
+            "space w up": "workspace::ActivatePaneUp",
+            "space w down": "workspace::ActivatePaneDown",
+            "space w h": "workspace::ActivatePaneLeft",
+            "space w l": "workspace::ActivatePaneRight",
+            "space w k": "workspace::ActivatePaneUp",
+            "space w j": "workspace::ActivatePaneDown",
+            "space w ctrl-h": "workspace::ActivatePaneLeft",
+            "space w ctrl-l": "workspace::ActivatePaneRight",
+            "space w ctrl-k": "workspace::ActivatePaneUp",
+            "space w ctrl-j": "workspace::ActivatePaneDown",
+            "space w shift-left": "workspace::SwapPaneLeft",
+            "space w shift-right": "workspace::SwapPaneRight",
+            "space w shift-up": "workspace::SwapPaneUp",
+            "space w shift-down": "workspace::SwapPaneDown",
+            "space w shift-h": "workspace::SwapPaneLeft",
+            "space w shift-l": "workspace::SwapPaneRight",
+            "space w shift-k": "workspace::SwapPaneUp",
+            "space w shift-j": "workspace::SwapPaneDown",
             "space w g t": "pane::ActivateNextItem",
             "space w ctrl-g t": "pane::ActivateNextItem",
             "space w g shift-t": "pane::ActivatePrevItem",
@@ -241,7 +274,7 @@
         "context": "Editor && vim_mode == insert && !menu",
         "bindings": {
             "ctrl-x": "editor::Cut",
-            "ctrl-r": ["vim::PushOperator", "Register"],
+            "ctrl-r": "vim::PushRegister",
             "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
             "j j": "vim::NormalBefore",
             "j k": "vim::NormalBefore"
