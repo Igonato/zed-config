@@ -45,6 +45,7 @@
     "ui_font_size": 18,
     "buffer_font_size": 21.0,
     "buffer_font_family": "IosevkaCustom Nerd Font",
+    // Ligatures check:
     // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
     // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
     // <-> <--> <---> <----> <=> <==> <===> <====> :: ::: __
@@ -66,16 +67,15 @@
     },
 
     // Other UI
-    "line_indicator_format": "long",
     "scrollbar": {
-        "show": "always"
+        // "show": "always"
     },
     "git": {
         "git_gutter": "tracked_files"
     },
     "terminal": {
         "toolbar": {
-            "breadcrumbs": false
+            // "breadcrumbs": false
         },
         "dock": "right",
         "font_size": 16,
@@ -120,6 +120,7 @@
             }
         },
         "JSONC": {
+            "show_edit_predictions": false,
             "tab_size": 4
         },
         "Odin": {
