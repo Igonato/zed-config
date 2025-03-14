@@ -94,7 +94,7 @@
             "ctrl-shift-`": "workspace::NewTerminal",
             "ctrl-t": "workspace::NewFile",
             "ctrl-tab": "pane::ActivateNextItem",
-            "ctrl-shift-tab": "pane::ActivatePrevItem"
+            "ctrl-shift-tab": "pane::ActivatePreviousItem"
         }
     },
     {
@@ -112,6 +112,8 @@
             "ctrl-shift-j": "editor::MoveLineDown",
             "ctrl-alt-j": "editor::AddSelectionBelow", // Insert Cursor Below
             "ctrl-alt-k": "editor::AddSelectionAbove", // Insert Cursor Above
+            "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
+            "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
 
             // Fix missing or incorrect Sublime Text bindings
             // "ctrl-;": "buffer_search::Fuzzy" // Not yet supported ? as of 2024-11-19
@@ -124,7 +126,8 @@
             // Layout presets are not yet supported ? as of 2024-11-19
             // try workspace::SendKeystrokes maybe?
             "alt-shift-2": "pane::SplitRight",
-            "alt-shift-@": "pane::SplitRight",
+            "alt-@": "pane::SplitRight",
+            "alt-shift-1": "pane::SplitRight",
 
             "ctrl-shift-[": "editor::Fold",
             "ctrl-shift-]": "editor::UnfoldLines"
@@ -180,8 +183,8 @@
             "space w shift-j": "workspace::SwapPaneDown",
             "space w g t": "pane::ActivateNextItem",
             "space w ctrl-g t": "pane::ActivateNextItem",
-            "space w g shift-t": "pane::ActivatePrevItem",
-            "space w ctrl-g shift-t": "pane::ActivatePrevItem",
+            "space w g shift-t": "pane::ActivatePreviousItem",
+            "space w ctrl-g shift-t": "pane::ActivatePreviousItem",
             "space w w": "workspace::ActivateNextPane",
             "space w ctrl-w": "workspace::ActivateNextPane",
             "space w p": "workspace::ActivatePreviousPane",
@@ -207,7 +210,7 @@
         // Normal & visual mode
         "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
         "bindings": {
-            "space g h r": "editor::RevertSelectedHunks",
+            "space g h r": "git::Restore",
             "space t i": "editor::ToggleInlayHints",
             "space t e": "workspace::ToggleLeftDock",
             "space t w": "editor::ToggleSoftWrap",
@@ -245,7 +248,7 @@
 
             // + Buffers
             // Switch between buffers
-            "shift-h": "pane::ActivatePrevItem",
+            "shift-h": "pane::ActivatePreviousItem",
             "shift-l": "pane::ActivateNextItem",
             // Close active panel
             "shift-q": "pane::CloseActiveItem",
@@ -265,8 +268,8 @@
         // Visual mode only
         "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
         "bindings": {
-            "shift-j": "editor::MoveLineDown",
-            "shift-k": "editor::MoveLineUp"
+            "shift-k": "editor::MoveLineUp",
+            "shift-j": "editor::MoveLineDown"
         }
     },
     {
@@ -306,6 +309,17 @@
             // Close project panel as project file panel on the right
             "q": "workspace::ToggleRightDock",
             "space e": "workspace::ToggleRightDock"
+        }
+    },
+
+    // Cyrillic
+    // TODO: incomplete
+    {
+        "context": "Editor",
+        "bindings": {
+            "ctrl-cyrillic_em": "editor::Paste",
+            "ctrl-cyrillic_es": "editor::Copy",
+            "ctrl-cyrillic_yeru": "workspace::Save"
         }
     }
 ]

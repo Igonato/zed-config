@@ -23,7 +23,7 @@
     "assistant": {
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-3-5-sonnet-latest"
+            "model": "claude-3-7-sonnet-latest"
         },
         "show_hints": false,
         "version": "2"
@@ -97,6 +97,9 @@
                 "enabled": true
             }
         },
+        "JavaScript": {
+            "tab_size": 4
+        },
         "TypeScript": {
             "tab_size": 4
         },
@@ -131,7 +134,8 @@
                 }
             },
             "format_on_save": "on"
-        }
+        },
+        "TOML": { "enable_language_server": false }
     },
 
     "telemetry": {
