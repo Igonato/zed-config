@@ -1,18 +1,29 @@
 // Static tasks configuration.
-//
-// Example:
+// https://zed.dev/docs/tasks
 [
     {
         "label": "Odin: run file",
-        "command": "odin run $ZED_FILE -file",
-        "cwd": "$ZED_DIRNAME",
-        "reveal": "no_focus"
+        "command": "mkdir -p build; odin run $ZED_FILE -file -out:build/main",
+        "reveal": "no_focus",
+        "hide": "on_success"
     },
     {
         // Requires watchexec (`cargo install --locked watchexec-cli`)
         "label": "Odin: run file + watch and rerun on changes",
-        "command": "watchexec -r -c -w '$ZED_FILE' odin run '$ZED_FILE' -file",
-        "cwd": "$ZED_DIRNAME",
-        "reveal": "no_focus"
+        "command": "mkdir -p build; watchexec -r -c -w '$ZED_FILE' odin run '$ZED_FILE' -file -out:build/main",
+        "reveal": "no_focus",
+        "hide": "on_success"
+    },
+    {
+        "label": "Odin: run folder",
+        "command": "mkdir -p build; odin run $ZED_DIRNAME -out:build/main",
+        "reveal": "no_focus",
+        "hide": "on_success"
+    },
+    {
+        "label": "Odin: run project",
+        "command": "mkdir -p build; odin run . -out:build/main",
+        "reveal": "no_focus",
+        "hide": "on_success"
     }
 ]

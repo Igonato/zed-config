@@ -124,7 +124,8 @@
             "tab_size": 4
         },
         "Odin": {
-            "format_on_save": "off",
+            "show_edit_predictions": false,
+            "format_on_save": "on",
             "hard_tabs": true
         },
         "Python": {

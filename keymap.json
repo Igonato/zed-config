@@ -217,7 +217,9 @@
             "space w v": "pane::SplitVertical",
             "space w s": "pane::SplitHorizontal",
             "space w c": "pane::CloseAllItems",
-            "space w o": "workspace::CloseInactiveTabsAndPanes",
+            "space w o": "pane::CloseInactiveItems",
+            "space w a": "pane::CloseItemsToTheRight",
+            "space w b": "pane::CloseItemsToTheLeft",
             "space w n": "workspace::NewFile"
         }
     },
