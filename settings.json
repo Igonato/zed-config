@@ -8,6 +8,14 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     // Basic
+    "edit_predictions": {
+        "mode": "subtle",
+        "copilot": {
+            "proxy": null,
+            "proxy_no_verify": null
+        },
+        "enabled_in_assistant": false
+    },
     "show_edit_predictions": false,
     "tab_bar": {
         "show": true
@@ -28,6 +36,11 @@
         "show_hints": false,
         "version": "2"
     },
+    "language_models": {
+        "ollama": {
+            "api_url": "http://ollama-host:11434"
+        }
+    },
     "features": {
         "edit_prediction_provider": "zed"
     },
@@ -42,7 +55,7 @@
     },
 
     // Font
-    "ui_font_size": 18,
+    "ui_font_size": 16,
     "buffer_font_size": 21.0,
     "buffer_font_family": "IosevkaCustom Nerd Font",
     // Ligatures check:

@@ -11,7 +11,6 @@
         "bindings": {
             "f4": "workspace::ToggleVimMode",
             // "ctrl-?": null, // Doesn't work on US layout anyway, produces confusing assistant hint
-            "f5": "assistant::ToggleFocus",
             "ctrl-k ctrl-p": "zed::OpenSettings"
         }
     },
@@ -119,13 +118,29 @@
             "ctrl-shift-n": "menu::SelectPrevious"
         }
     },
+    // Bugged :(
+    // {
+    //     "context": "!AssistantPanel",
+    //     "bindings": {
+    //         "f5": "assistant::ToggleFocus"
+    //     }
+    // },
+    {
+        // "context": "AssistantPanel",
+        "bindings": {
+            "f5": "workspace::ToggleRightDock"
+        }
+    },
 
     // Terminal
     {
         "context": "Terminal",
         "bindings": {
             "f4": "terminal::ToggleViMode",
-            "ctrl-d": "pane::CloseActiveItem"
+            "ctrl-d": "pane::CloseActiveItem",
+            "ctrl-n": null,
+            "ctrl-p": null,
+            "ctrl-shift-n": null
         }
     },
 
@@ -235,7 +250,7 @@
             "space t e": "workspace::ToggleLeftDock",
             "space t w": "editor::ToggleSoftWrap",
             "space m p": "markdown::OpenPreview",
-            "space m P": "markdown::OpenPreviewToTheSide",
+            "space m shift-p": "markdown::OpenPreviewToTheSide",
             "space f p": "projects::OpenRecent",
             "space s w": "pane::DeploySearch",
             "space t a": "assistant::ToggleFocus",
@@ -254,15 +269,14 @@
             "space .": "editor::ToggleCodeActions",
             "space c r": "editor::Rename",
             "g d": "editor::GoToDefinition",
-            "g D": "editor::GoToDefinitionSplit",
+            "g shift-d": "editor::GoToDefinitionSplit",
             "g i": "editor::GoToImplementation",
-            "g I": "editor::GoToImplementationSplit",
+            "g shift-i": "editor::GoToImplementationSplit",
             "g t": "editor::GoToTypeDefinition",
-            "g T": "editor::GoToTypeDefinitionSplit",
+            "g shift-t": "editor::GoToTypeDefinitionSplit",
             "g r": "editor::FindAllReferences",
             "g b": "pane::GoBack",
             "g f": "pane::GoForward",
-            "g l": "editor::OpenUrl",
 
             // TODO: git diff is not ready yet, refer https://github.com/zed-industries/zed/issues/8665#issuecomment-2194000497
 
@@ -276,7 +290,10 @@
             // Close other items
             "space b o": "pane::CloseInactiveItems",
             // File finder
-            "space space": "file_finder::Toggle",
+            "space space": [
+                "task::Spawn",
+                { "task_name": "file_finder", "reveal_target": "center" }
+            ],
             // Project search
             "space /": "pane::DeploySearch",
             // TODO: Open other files
@@ -300,7 +317,8 @@
             "ctrl-r": "vim::PushRegister",
             "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
             "j j": "vim::NormalBefore",
-            "j k": "vim::NormalBefore"
+            "j k": "vim::NormalBefore",
+            "j c": "editor::ToggleCodeActions"
         }
     },
     // Empty pane, set of keybindings that are available when there is no active editor
@@ -318,7 +336,7 @@
         "context": "ProjectPanel && not_editing",
         "bindings": {
             "a": "project_panel::NewFile",
-            "A": "project_panel::NewDirectory",
+            "shift-a": "project_panel::NewDirectory",
             "n": "project_panel::NewDirectory",
             "r": "project_panel::Rename",
             "d": "project_panel::Delete",

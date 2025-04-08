@@ -25,5 +25,12 @@
         "command": "mkdir -p build; odin run . -out:build/main",
         "reveal": "no_focus",
         "hide": "on_success"
+    },
+    {
+        "label": "file_finder",
+        "command": "zed -a \"$(tv files)\"",
+        "hide": "always",
+        "allow_concurrent_runs": true,
+        "use_new_terminal": true
     }
 ]
