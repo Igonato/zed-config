@@ -8,18 +8,6 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     // Basic
-    "edit_predictions": {
-        "mode": "subtle",
-        "copilot": {
-            "proxy": null,
-            "proxy_no_verify": null
-        },
-        "enabled_in_assistant": false
-    },
-    "show_edit_predictions": false,
-    "tab_bar": {
-        "show": true
-    },
     "base_keymap": "SublimeText",
     "multi_cursor_modifier": "cmd_or_ctrl",
     "cursor_blink": false,
@@ -44,6 +32,15 @@
     "features": {
         "edit_prediction_provider": "zed"
     },
+    "edit_predictions": {
+        "mode": "subtle",
+        "copilot": {
+            "proxy": null,
+            "proxy_no_verify": null
+        },
+        "enabled_in_assistant": false
+    },
+    "show_edit_predictions": false,
 
     // Vim stuff
     "vim_mode": true,
@@ -56,7 +53,7 @@
 
     // Font
     "ui_font_size": 16,
-    "buffer_font_size": 21.0,
+    "buffer_font_size": 21,
     "buffer_font_family": "IosevkaCustom Nerd Font",
     // Ligatures check:
     // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
@@ -82,6 +79,13 @@
     // Other UI
     "scrollbar": {
         // "show": "always"
+    },
+    "tab_bar": {
+        "show_nav_history_buttons": false
+    },
+    "tabs": {
+        "file_icons": true,
+        "git_status": true
     },
     "git": {
         "git_gutter": "tracked_files"
@@ -142,6 +146,7 @@
             "hard_tabs": true
         },
         "Python": {
+            "show_edit_predictions": true,
             "formatter": {
                 "external": {
                     "command": "ruff",
@@ -156,5 +161,6 @@
     "telemetry": {
         "diagnostics": false,
         "metrics": false
-    }
+    },
+    "projects_online_by_default": false
 }
