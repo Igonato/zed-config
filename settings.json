@@ -18,11 +18,11 @@
     // AI
     "agent": {
         "always_allow_tool_actions": false,
-        "enabled": false,
+        "enabled": true,
         "default_profile": "write",
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-3-7-sonnet-latest"
+            "model": "claude-sonnet-4-thinking"
         },
         "version": "2"
     },
@@ -80,6 +80,9 @@
     },
 
     // Other UI
+    "minimap": {
+        "show": "always"
+    },
     "scrollbar": {
         // "show": "always"
         "axes": {

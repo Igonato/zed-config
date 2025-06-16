@@ -5,6 +5,7 @@
 //
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
+
 [
     // Misc
     {
@@ -122,17 +123,11 @@
     {
         "bindings": {
             "alt-~": "agent::NewTextThread",
+            "alt-`": "agent::NewTextThread",
             "alt-shift-`": "agent::NewTextThread"
         }
     },
     {
-        "context": "!ContextEditor > Editor",
-        "bindings": {
-            "f5": "agent::ToggleFocus"
-        }
-    },
-    {
-        "context": "ContextEditor > Editor",
         "bindings": {
             "f5": "workspace::ToggleRightDock"
         }
@@ -256,11 +251,12 @@
             "space t h": "editor::ToggleInlayHints",
             "space t e": "workspace::ToggleLeftDock",
             "space t w": "editor::ToggleSoftWrap",
+            "space t m": "editor::ToggleMinimap",
             "space m p": "markdown::OpenPreview",
             "space m shift-p": "markdown::OpenPreviewToTheSide",
             "space f p": "projects::OpenRecent",
             "space s w": "pane::DeploySearch",
-            "space t a": "assistant::ToggleFocus",
+            "space t a": "agent::ToggleFocus",
             "space a c": "assistant::CopyCode",
             "space r t": "task::Spawn",
             "space r r": "task::Rerun"
