@@ -17,6 +17,10 @@
 
     // AI
     "agent": {
+        "inline_assistant_model": {
+            "provider": "zed.dev",
+            "model": "claude-sonnet-4"
+        },
         "always_allow_tool_actions": false,
         "enabled": true,
         "default_profile": "write",
@@ -72,7 +76,7 @@
     // Theme
     "theme": {
         "mode": "system",
-        "light": "Catppuccin Latte",
+        "light": "Gruvbox Light Soft",
         "dark": "Zed Legacy:  Andromeda"
     },
     "experimental.theme_overrides": {
@@ -119,6 +123,7 @@
     // Languages
     "languages": {
         "Rust": {
+            "show_edit_predictions": false,
             "inlay_hints": {
                 "enabled": true
             }
@@ -155,7 +160,7 @@
             "hard_tabs": true
         },
         "Python": {
-            "show_edit_predictions": false,
+            "show_edit_predictions": true,
             "formatter": {
                 "external": {
                     "command": "ruff",

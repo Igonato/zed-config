@@ -138,7 +138,7 @@
         "context": "Terminal",
         "bindings": {
             "f4": "terminal::ToggleViMode",
-            "ctrl-d": "pane::CloseActiveItem",
+            // "ctrl-d": "pane::CloseActiveItem",
             "ctrl-n": null,
             "ctrl-p": null,
             "ctrl-shift-n": null
