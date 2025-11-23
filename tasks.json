@@ -2,31 +2,6 @@
 // https://zed.dev/docs/tasks
 [
     {
-        "label": "Odin: run file",
-        "command": "mkdir -p build; odin run $ZED_FILE -file -out:build/main",
-        "reveal": "no_focus",
-        "hide": "on_success"
-    },
-    {
-        // Requires watchexec (`cargo install --locked watchexec-cli`)
-        "label": "Odin: run file + watch and rerun on changes",
-        "command": "mkdir -p build; watchexec -r -c -w '$ZED_FILE' odin run '$ZED_FILE' -file -out:build/main",
-        "reveal": "no_focus",
-        "hide": "on_success"
-    },
-    {
-        "label": "Odin: run folder",
-        "command": "mkdir -p build; odin run $ZED_DIRNAME -out:build/main",
-        "reveal": "no_focus",
-        "hide": "on_success"
-    },
-    {
-        "label": "Odin: run project",
-        "command": "mkdir -p build; odin run . -out:build/main",
-        "reveal": "no_focus",
-        "hide": "on_success"
-    },
-    {
         "label": "file_finder",
         "command": "zed -a \"$(tv files)\"",
         "hide": "always",

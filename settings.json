@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     // Basic
+    "calls": {
+        "mute_on_join": true
+    },
     "base_keymap": "SublimeText",
     "multi_cursor_modifier": "cmd_or_ctrl",
     "cursor_blink": false,
@@ -16,16 +19,15 @@
     "vertical_scroll_margin": 7,
     "file_scan_exclusions": [
         "**/.git",
-        "**/.svn",
         "**/.hg",
-        "**/.jj",
-        "**/CVS",
-        "**/.DS_Store",
-        "**/Thumbs.db",
-        "**/.classpath",
-        "**/.settings",
         "**/.ropeproject",
         "**/.ruff_cache",
+        "**/.settings",
+        "**/.sqlite3-shm",
+        "**/.sqlite3-wat",
+        "**/.svn",
+        "**/CVS",
+        "**/Thumbs.db",
         "**/__pycache__"
     ],
 
@@ -37,10 +39,10 @@
         },
         "always_allow_tool_actions": false,
         "enabled": true,
-        "default_profile": "write",
+        "default_profile": "ask",
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-thinking"
+            "model": "claude-sonnet-4-5-thinking"
         }
     },
     "language_models": {
@@ -64,7 +66,7 @@
 
     // Vim stuff
     "vim_mode": true,
-    "relative_line_numbers": true,
+    "relative_line_numbers": "enabled",
     "vim": {
         "use_smartcase_find": true,
         "toggle_relative_line_numbers": true
@@ -89,7 +91,7 @@
     "theme": {
         "mode": "system",
         "light": "Gruvbox Light Soft",
-        "dark": "Zed Legacy:  Andromeda"
+        "dark": "Zed Legacy: Andromeda"
     },
     "experimental.theme_overrides": {
         "scrollbar.thumb.background": "#5555"
@@ -100,7 +102,7 @@
         "show": "always"
     },
     "scrollbar": {
-        // "show": "always"
+        // "show": "never",
         "axes": {
             "horizontal": false
         }
@@ -122,24 +124,10 @@
         "dock": "right",
         "font_size": 15,
         "line_height": "standard"
-        // "shell": {
-        //     "with_arguments": {
-        //         "program": "D:\\\\git-sdk-64\\usr\\bin\\zsh.exe",
-        //         // "program": "C:\\\\Program Files\\Git\\bin\\bash.exe",
-        //         // "program": "C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"
-        //         "args": ["--login", "-i"]
-        //     }
-        // }
     },
 
     // Languages
     "languages": {
-        "Rust": {
-            "show_edit_predictions": false,
-            "inlay_hints": {
-                "enabled": true
-            }
-        },
         "JavaScript": {
             "tab_size": 4
         },
@@ -163,24 +151,23 @@
             }
         },
         "JSONC": {
-            "show_edit_predictions": false,
             "tab_size": 4
         },
         "Odin": {
             "show_edit_predictions": false,
-            "format_on_save": "on",
+            "format_on_save": "off",
             "hard_tabs": true
         },
-        "Python": {
-            "show_edit_predictions": true,
-            "formatter": {
-                "external": {
-                    "command": "ruff",
-                    "arguments": ["format", "-"]
-                }
-            },
-            "format_on_save": "on"
-        },
+        // "Python": {
+        //     "show_edit_predictions": false,
+        //     "formatter": {
+        //         "external": {
+        //             "command": "ruff",
+        //             "arguments": ["format", "-"]
+        //         }
+        //     },
+        //     "format_on_save": "on"
+        // },
         "TOML": { "enable_language_server": false }
     },
 
