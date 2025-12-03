@@ -13,7 +13,11 @@
             "f4": "workspace::ToggleVimMode",
             "f3": "search::SelectNextMatch",
             "shift-f3": "search::SelectPreviousMatch",
-            "ctrl-k ctrl-p": "zed::OpenSettings"
+            "ctrl-k ctrl-p": "zed::OpenSettingsFile",
+            "F5": [
+                "task::Spawn",
+                { "task_name": "Run", "reveal_target": "dock" }
+            ]
         }
     },
 
@@ -127,11 +131,6 @@
             "alt-shift-`": "agent::NewTextThread"
         }
     },
-    {
-        "bindings": {
-            "f5": "workspace::ToggleRightDock"
-        }
-    },
 
     // Terminal
     {
@@ -233,7 +232,7 @@
             "space w v": "pane::SplitVertical",
             "space w s": "pane::SplitHorizontal",
             "space w c": "pane::CloseAllItems",
-            "space w o": "pane::CloseInactiveItems",
+            "space w o": "pane::CloseOtherItems",
             "space w a": "pane::CloseItemsToTheRight",
             "space w b": "pane::CloseItemsToTheLeft",
             "space w n": "workspace::NewFile"
@@ -291,7 +290,7 @@
             "shift-q": "pane::CloseActiveItem",
             "space b d": "pane::CloseActiveItem",
             // Close other items
-            "space b o": "pane::CloseInactiveItems",
+            "space b o": "pane::CloseOtherItems",
             // File finder
             "space space": [
                 "task::Spawn",
@@ -383,7 +382,7 @@
             // Refactoring
             "space c r ": "editor::Rename",
             // Chat with AI
-            "space a a": "assistant::ToggleFocus",
+            "space a a": "agent::ToggleFocus",
             "ctrl-\\": "workspace::ToggleRightDock",
             "space a e": "assistant::InlineAssist",
             "space a t": "workspace::ToggleRightDock",
@@ -431,7 +430,7 @@
             // Close buffer
             "space b d": "pane::CloseActiveItem",
             // Close inactive buffers
-            "space b q": "pane::CloseInactiveItems",
+            "space b q": "pane::CloseOtherItems",
             // New file
             "space b n": "workspace::NewFile",
             // Search in the current buffer
@@ -506,17 +505,6 @@
         "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
         "bindings": {
             "b": "vim::AnyBrackets"
-        }
-    },
-
-    // Cyrillic
-    // TODO: incomplete
-    {
-        "context": "Editor",
-        "bindings": {
-            "ctrl-cyrillic_em": "editor::Paste",
-            "ctrl-cyrillic_es": "editor::Copy",
-            "ctrl-cyrillic_yeru": "workspace::Save"
         }
     }
 ]

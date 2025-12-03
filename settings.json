@@ -16,6 +16,7 @@
     "cursor_blink": false,
     "autosave": "on_focus_change",
     "wrap_guides": [80, 100],
+    "soft_wrap": "bounded",
     "vertical_scroll_margin": 7,
     "file_scan_exclusions": [
         "**/.git",
@@ -37,12 +38,12 @@
             "provider": "zed.dev",
             "model": "claude-sonnet-4"
         },
-        "always_allow_tool_actions": false,
+        "always_allow_tool_actions": true,
         "enabled": true,
-        "default_profile": "ask",
+        "default_profile": "write",
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-5-thinking"
+            "model": "claude-opus-4-5-thinking"
         }
     },
     "language_models": {
@@ -121,7 +122,7 @@
         "toolbar": {
             // "breadcrumbs": false
         },
-        "dock": "right",
+        "dock": "bottom",
         "font_size": 15,
         "line_height": "standard"
     },
